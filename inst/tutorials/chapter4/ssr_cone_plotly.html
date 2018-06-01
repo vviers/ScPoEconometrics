@@ -113,6 +113,8 @@ $(document).ready(function () {
 </div>
 
 
+<p>hello:</p>
+<p><span class="math inline">\(\frac{x}{y}\)</span></p>
 <div class="row">
 <div class="col-sm-2">
 <div class="form-group shiny-input-container">
@@ -237,7 +239,8 @@ output$SSR_cone <- renderPlotly({
   colorbar(title = "Sum of Squared\nResiduals") %>%
   add_markers(x = ~a_, y = ~b_, z = ~ssr_, data = annot, name = "Your Guess") %>%
   layout(title = "Sum of Squared Residuals\n(Surface Plot, your guess shown in green)",
-         xaxis=list(range=c(-6,6)), yaxis=list(range=c(-6,6)), autosize = F, width = 400, height = 350)
+         xaxis=list(range=c(-6,6)), yaxis=list(range=c(-6,6))) 
+  # Not sure how to change default zoom...
   
 
 
