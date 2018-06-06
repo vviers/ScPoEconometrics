@@ -390,13 +390,13 @@ output$regPlot <- renderPlot({
     curve(expr = expr, from = min(x)-10, to = max(x)+10, add = T, col = "black")
     segments(x0 = x, y0 = y, x1 = x, y1 = (y + errors), col = "green")
     rect(xleft = x, ybottom = y,
-         xright = x + abs(errors), ytop = y + errors, density = -1,
+         xright = x + abs(errors), ytop = y - errors, density = -1,
          col = rgb(red = 0, green = 1, blue = 0, alpha = 0.1), border = NA)
   } else {
     curve(expr =expr , from = min(x)-10, to = max(x)+10, add = T, col = "black")
     segments(x0 = x, y0 = y, x1 = x, y1 = (y + errors), col = "red")
     rect(xleft = x, ybottom = y,
-         xright = x + abs(errors), ytop = y + errors, density = -1,
+         xright = x + abs(errors), ytop = y - errors, density = -1,
          col = rgb(red = 1, green = 0, blue = 0, alpha = 0.1), border = NA)
   }
 
@@ -462,13 +462,13 @@ output$regPlot_simple <- renderPlot({
     curve(expr = expr, from = min(x)-10, to = max(x)+10, add = TRUE, col = "black")
     segments(x0 = x, y0 = y, x1 = x, y1 = (y + errors), col = "green")
     rect(xleft = x, ybottom = y,
-         xright = x + abs(errors), ytop = y + errors, density = -1,
+         xright = x + abs(errors), ytop = y - errors, density = -1,
          col = rgb(red = 0, green = 1, blue = 0, alpha = 0.05), border = NA)
   } else {
     curve(expr =expr , from = min(x)-10, to = max(x)+10, add = TRUE, col = "black")
     segments(x0 = x, y0 = y, x1 = x, y1 = (y + errors), col = "red")
     rect(xleft = x, ybottom = y,
-         xright = x + abs(errors), ytop = y + errors, density = -1,
+         xright = x + abs(errors), ytop = y - errors, density = -1,
          col = rgb(red = 1, green = 0, blue = 0, alpha = 0.05), border = NA)
   }
 
@@ -537,14 +537,14 @@ output$regPlot2 <- renderPlot({
       abline(h = a, col = "black")
       segments(x0 = x, y0 = y, x1 = x, y1 = (y + errors), col = "green")
       rect(xleft = x, ybottom = y,
-           xright = x + abs(errors), ytop = y + errors, density = -1,
+           xright = x + abs(errors), ytop = y - errors, density = -1,
            col = rgb(red = 0, green = 1, blue = 0, alpha = 0.1), border = NA)
     } else {
       #curve(expr = expr , from = min(x)-10, to = max(x)+10, add = TRUE, col = "black")
       abline(h = a, col = "black")
       segments(x0 = x, y0 = y, x1 = x, y1 = (y + errors), col = "red")
       rect(xleft = x, ybottom = y,
-           xright = x + abs(errors), ytop = y + errors, density = -1,
+           xright = x + abs(errors), ytop = y - errors, density = -1,
            col = rgb(red = 1, green = 0, blue = 0, alpha = 0.1), border = NA)
     }
   } else if (input$const == 2){
@@ -591,13 +591,13 @@ output$regPlot2 <- renderPlot({
       curve(expr = expr, from = min(x)-10, to = max(x)+10, add = TRUE, col = "black")
       segments(x0 = x, y0 = y, x1 = x, y1 = (y + errors), col = "green")
       rect(xleft = x, ybottom = y,
-           xright = x + abs(errors), ytop = y + errors, density = -1,
+           xright = x + abs(errors), ytop = y - errors, density = -1,
            col = rgb(red = 0, green = 1, blue = 0, alpha = 0.1), border = NA)
     } else {
       curve(expr = expr , from = min(x)-10, to = max(x)+10, add = TRUE, col = "black")
       segments(x0 = x, y0 = y, x1 = x, y1 = (y + errors), col = "red")
       rect(xleft = x, ybottom = y,
-           xright = x + abs(errors), ytop = y + errors, density = -1,
+           xright = x + abs(errors), ytop = y - errors, density = -1,
            col = rgb(red = 1, green = 0, blue = 0, alpha = 0.1), border = NA)
     }
     
@@ -627,13 +627,13 @@ output$regPlot2 <- renderPlot({
       curve(expr = expr, from = min(x)-10, to = max(x)+10, add = TRUE, col = "black")
       segments(x0 = x, y0 = y, x1 = x, y1 = (y + errors), col = "green")
       rect(xleft = x, ybottom = y,
-           xright = x + abs(errors), ytop = y + errors, density = -1,
+           xright = x + abs(errors), ytop = y - errors, density = -1,
            col = rgb(red = 0, green = 1, blue = 0, alpha = 0.1), border = NA)
     } else {
       curve(expr =expr , from = min(x)-10, to = max(x)+10, add = TRUE, col = "black")
       segments(x0 = x, y0 = y, x1 = x, y1 = (y + errors), col = "red")
       rect(xleft = x, ybottom = y,
-           xright = x + abs(errors), ytop = y + errors, density = -1,
+           xright = x + abs(errors), ytop = y - errors, density = -1,
            col = rgb(red = 1, green = 0, blue = 0, alpha = 0.1), border = NA)
     }
     
@@ -747,13 +747,13 @@ output$regPlot_dummy <- renderPlot({
     curve(expr = expr, from = min(x)-10, to = max(x)+10, add = TRUE, col = "black")
     segments(x0 = x, y0 = y, x1 = x, y1 = (y + errors), col = "green")
     rect(xleft = x, ybottom = y,
-         xright = x + abs(errors), ytop = y + errors, density = -1,
+         xright = x + abs(errors), ytop = y - errors, density = -1,
          col = rgb(red = 0, green = 1, blue = 0, alpha = 0.05), border = NA)
   } else {
     curve(expr =expr , from = min(x)-10, to = max(x)+10, add = TRUE, col = "black")
     segments(x0 = x, y0 = y, x1 = x, y1 = (y + errors), col = "red")
     rect(xleft = x, ybottom = y,
-         xright = x + abs(errors), ytop = y + errors, density = -1,
+         xright = x + abs(errors), ytop = y - errors, density = -1,
          col = rgb(red = 1, green = 0, blue = 0, alpha = 0.05), border = NA)
   }
 
@@ -817,13 +817,13 @@ output$regPlot_std <- renderPlot({
     curve(expr = expr, from = min(x)-10, to = max(x)+10, add = TRUE, col = "black")
     segments(x0 = x, y0 = y, x1 = x, y1 = (y + errors), col = "green")
     rect(xleft = x, ybottom = y,
-         xright = x + abs(errors), ytop = y + errors, density = -1,
+         xright = x + abs(errors), ytop = y - errors, density = -1,
          col = rgb(red = 0, green = 1, blue = 0, alpha = 0.05), border = NA)
   } else {
     curve(expr =expr , from = min(x)-10, to = max(x)+10, add = TRUE, col = "black")
     segments(x0 = x, y0 = y, x1 = x, y1 = (y + errors), col = "red")
     rect(xleft = x, ybottom = y,
-         xright = x + abs(errors), ytop = y + errors, density = -1,
+         xright = x + abs(errors), ytop = y - errors, density = -1,
          col = rgb(red = 1, green = 0, blue = 0, alpha = 0.05), border = NA)
   }
 
