@@ -24,7 +24,7 @@ Welcome to Introductory Econometrics for 2nd year undergraduates at ScPo! On thi
 
 ### Objective {-}
 
-This course aims to teach you the basics of data analysis needed in a Social Sciences oriented University like SciencesPo. We purposefully start at a level that assumes no prior knowledge about statistics whatsoever. Our objective is to have you understand and be able to interpret linear regression analysis. We will not rely on maths and statistics, but practical learning in order to teach the main concepts.
+This course aims to teach you the basics of data analysis needed in a Social Sciences oriented University like Sciences Po. We purposefully start at a level that assumes no prior knowledge about statistics whatsoever. Our objective is to have you understand and be able to interpret linear regression analysis. We will not rely on maths and statistics, but practical learning in order to teach the main concepts.
 
 ### Syllabus and Requirements {-}
 
@@ -37,6 +37,8 @@ if (!require("devtools")) install.packages("devtools")
 library(devtools)
 install_github(repo = "ScPoEcon/ScPoEconometrics")
 ```
+
+If you don't know how to access your `R` console (or even what a console is!), head to [Chapter 1](https://scpoecon.github.io/ScPoEconometrics/R-intro.html#getting-started) which will help you getting started.
 
 ### Course Structure {-}
 
